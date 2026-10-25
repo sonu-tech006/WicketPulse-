@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pitch-dark: #080D1B;
+  --color-pitch-surface: #111A2E;
+  --color-pitch-card: #15203A;
+  --color-pitch-card-hover: #1C2B4E;
+  --color-pulse-green: #B8FF4D;
+  --color-pulse-cyan: #37D5F5;
+  --color-pulse-red: #EF4444;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  --bg-primary: #080D1B;
+  --bg-surface: #111A2E;
+  --bg-card: #15203A;
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --text-primary: #F8FAFC;
+  --text-muted: #94A3B8;
+  --accent-green: #B8FF4D;
+  --accent-cyan: #37D5F5;
+  --accent-red: #EF4444;
+}
+
+html.light {
+  --bg-primary: #F4F6FB;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --text-primary: #0F172A;
+  --text-muted: #64748B;
+  --accent-green: #15803D;
+  --accent-cyan: #0284C7;
+  --accent-red: #DC2626;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Tabular figures for scoreboards and stats */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(8, 13, 27, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(184, 255, 77, 0.4);
+}
+
+/* Smooth cricket ball delivery animations */
+@keyframes pulseLive {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.75;
+  }
+}
+
+.animate-pulse-live {
+  animation: pulseLive 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Cricket ball seam pattern */
+.cricket-seam {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.4) 2px,
+    rgba(255, 255, 255, 0.4) 4px
+  );
+}

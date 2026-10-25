@@ -1,0 +1,6 @@
+{
+  "name": "WicketPulse — Real-Time Cricket Platform",
+  "description": "Every Ball. Every Moment. Real-time cricket scores, ball-by-ball commentary, scorecards, ICC rankings, player profiles, and tournament schedules.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
